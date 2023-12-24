@@ -1,46 +1,40 @@
-# Pokedex - Projeto de Lista de Pokémons
+Pokedex - Projeto de Lista de Pokémons
 
-Este é um projeto simples de Pokedex (lista de Pokémons) desenvolvido por Edson Bruno. O projeto utiliza HTML, CSS e JavaScript para criar uma interface básica que exibe uma lista de Pokémons e permite carregar mais itens dinamicamente.
+Este projeto é uma Pokedex, uma lista de Pokémons, desenvolvido por Edson Bruno. Utilizando HTML, CSS e JavaScript, a aplicação proporciona uma interface simples que exibe uma lista de Pokémons, permitindo carregar mais itens dinamicamente.
+Estrutura do Projeto
 
-## Estrutura do Projeto
+    index.html: Este arquivo HTML é o principal e define a estrutura da página.
+    assets/: Pasta contendo recursos como imagens, estilos CSS e scripts JavaScript.
+        imgs/: Contém imagens utilizadas no projeto, incluindo o ícone da Pokébola e outras.
+        css/: Arquivo principal de estilo, denominado styles.min.css.
+        js/: Scripts JavaScript necessários para interação com a API Pokémon e manipulação do DOM.
 
-- **index.html:** Arquivo principal HTML que define a estrutura da página.
-- **assets/:** Pasta que contém recursos como imagens, estilos CSS e scripts JavaScript.
-  - **imgs/:** Contém imagens utilizadas no projeto, como o ícone da Pokébola e outras.
-  - **css/:** Contém o arquivo de estilo principal `styles.min.css`.
-  - **js/:** Contém os scripts JavaScript necessários para interação com a API Pokémon e manipulação do DOM.
+Estilos
 
-## Estilos
+O arquivo styles.min.css estabelece estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem e estilos para a estrutura da página.
+Funcionalidades
 
-O arquivo `styles.min.css` define estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem e estilos para a estrutura da página.
+    Exibição de uma lista de Pokémons.
+    Botão "Carregar mais" para expandir a lista à medida que o usuário rola a página.
+    Barra de pesquisa para buscar Pokémons.
 
-## Funcionalidades
-
-- Exibição de uma lista de Pokémons.
-- Botão "Carregar mais" para carregar mais itens à medida que o usuário rola a página.
-- Barra de pesquisa para pesquisar Pokémons.
-
-## Fontes Externas
+Fontes Externas
 
 O projeto utiliza a fonte Nunito do Google Fonts para estilizar o texto.
-
-## Autor
+Autor
 
 Este projeto foi criado por Edson Bruno.
-
-<img src='./a.png' alt=''>
+<img src='./a.png' alt='Exemplo de Imagem A'>
 <br>
-<img src='./b.png' alt=''>
+<img src='./b.png' alt='Exemplo de Imagem B'>
+Projeto
 
-## Projeto
+    Clone o repositório em sua máquina local.
+    Abra o arquivo index.html em um navegador web.
 
-1. Clone o repositório em sua máquina local.
-2. Abra o arquivo `index.html` em um navegador web.
+Assista ao Vídeo Tutorial
 
-## Assista ao Vídeo Tutorial
+Assista ao Vídeo
+Estrutura do Projeto
 
-[![Assista ao Vídeo](https://img.youtube.com/watch?v=479mhBa3rr0)
-
-## Estrutura do Projeto
-
-Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.
+Este é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.
