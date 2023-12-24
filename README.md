@@ -26,11 +26,19 @@ Autor
 
 Este projeto foi criado por Edson Bruno.
 
-    GitHub: Edson Bruno
+    GitHub: suclouflare
 
 Projeto
 
     Clone o repositório em sua máquina local.
     Abra o arquivo index.html em um navegador web.
+
+### Assista ao Vídeo Tutorial
+
+[![Assista ao Vídeo](./Gravaçao.mp4)
+
+**Nota**: Substitua `YOUR_VIDEO_ID` pelo ID do seu vídeo do YouTube.
+
+### Estrutura do Projeto
 
 Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.
