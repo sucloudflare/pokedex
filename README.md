@@ -28,7 +28,9 @@ O projeto utiliza a fonte Nunito do Google Fonts para estilizar o texto.
 
 Este projeto foi criado por Edson Bruno.
 
-- GitHub: [suclouflare](https://github.com/suclouflare)
+<img src='./a.png' alt=''>
+<br>
+<img src='./b.png' alt=''>
 
 ## Projeto
 
