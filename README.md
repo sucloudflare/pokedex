@@ -29,10 +29,7 @@ Este projeto foi criado por Edson Bruno.
 
     GitHub: Edson Bruno
 
-Agradecimentos
-
-Agradecimentos especiais à @brenda-a-s-dev, criadora original da base deste projeto.
-Como Usar
+Projeto
 
     Clone o repositório em sua máquina local.
     Abra o arquivo index.html em um navegador web.
