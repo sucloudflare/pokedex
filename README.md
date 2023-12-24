@@ -1,40 +1,56 @@
-Pokedex - Projeto de Lista de Pokémons
+ <h1>Pokedex - Projeto de Lista de Pokémons</h1>
 
-Este projeto é uma Pokedex, uma lista de Pokémons, desenvolvido por Edson Bruno. Utilizando HTML, CSS e JavaScript, a aplicação proporciona uma interface simples que exibe uma lista de Pokémons, permitindo carregar mais itens dinamicamente.
-Estrutura do Projeto
+    <p>Este é um projeto simples de Pokedex (lista de Pokémons) desenvolvido por Edson Bruno. O projeto utiliza HTML, CSS e JavaScript para criar uma interface básica que exibe uma lista de Pokémons e permite carregar mais itens dinamicamente.</p>
 
-    index.html: Este arquivo HTML é o principal e define a estrutura da página.
-    assets/: Pasta contendo recursos como imagens, estilos CSS e scripts JavaScript.
-        imgs/: Contém imagens utilizadas no projeto, incluindo o ícone da Pokébola e outras.
-        css/: Arquivo principal de estilo, denominado styles.min.css.
-        js/: Scripts JavaScript necessários para interação com a API Pokémon e manipulação do DOM.
+    <h2>Estrutura do Projeto</h2>
 
-Estilos
+    <ul>
+        <li><strong>index.html:</strong> Arquivo principal HTML que define a estrutura da página.</li>
+        <li><strong>assets/:</strong> Pasta que contém recursos como imagens, estilos CSS e scripts JavaScript.</li>
+        <ul>
+            <li><strong>imgs/:</strong> Contém imagens utilizadas no projeto, como o ícone da Pokébola e outras.</li>
+            <li><strong>css/:</strong> Contém o arquivo de estilo principal <code>styles.min.css</code>.</li>
+            <li><strong>js/:</strong> Contém os scripts JavaScript necessários para interação com a API Pokémon e manipulação do DOM.</li>
+        </ul>
+    </ul>
 
-O arquivo styles.min.css estabelece estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem e estilos para a estrutura da página.
-Funcionalidades
+    <h2>Estilos</h2>
 
-    Exibição de uma lista de Pokémons.
-    Botão "Carregar mais" para expandir a lista à medida que o usuário rola a página.
-    Barra de pesquisa para buscar Pokémons.
+    <p>O arquivo <code>styles.min.css</code> define estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem e estilos para a estrutura da página.</p>
 
-Fontes Externas
+    <h2>Funcionalidades</h2>
 
-O projeto utiliza a fonte Nunito do Google Fonts para estilizar o texto.
-Autor
+    <ul>
+        <li>Exibição de uma lista de Pokémons.</li>
+        <li>Botão "Carregar mais" para carregar mais itens à medida que o usuário rola a página.</li>
+        <li>Barra de pesquisa para pesquisar Pokémons.</li>
+    </ul>
 
-Este projeto foi criado por Edson Bruno.
-<img src='./a.png' alt='Exemplo de Imagem A'>
-<br>
-<img src='./b.png' alt='Exemplo de Imagem B'>
-Projeto
+    <h2>Fontes Externas</h2>
 
-    Clone o repositório em sua máquina local.
-    Abra o arquivo index.html em um navegador web.
+    <p>O projeto utiliza a fonte Nunito do Google Fonts para estilizar o texto.</p>
 
-Assista ao Vídeo Tutorial
+    <h2>Autor</h2>
 
-Assista ao Vídeo
-Estrutura do Projeto
+    <p>Este projeto foi criado por Edson Bruno.</p>
 
-Este é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.
+    <img src='./a.png' alt=''>
+    <br>
+    <img src='./b.png' alt=''>
+
+    <h2>Projeto</h2>
+
+    <ol>
+        <li>Clone o repositório em sua máquina local.</li>
+        <li>Abra o arquivo <code>index.html</code> em um navegador web.</li>
+    </ol>
+
+    <h2>Assista ao Vídeo Tutorial</h2>
+
+    <a href="https://www.youtube.com/watch?v=479mhBa3rr0">
+        <img src="https://img.youtube.com/vi/479mhBa3rr0/0.jpg" alt="Assista ao Vídeo">
+    </a>
+
+    <h2>Estrutura do Projeto</h2>
+
+    <p>Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.</p>
