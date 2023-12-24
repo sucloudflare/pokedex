@@ -37,7 +37,7 @@ Este projeto foi criado por Edson Bruno.
 
 ## Assista ao Vídeo Tutorial
 
-![Assista ao Vídeo](./Gravaçao.mp4)
+![Assista ao Vídeo](https://studio.youtube.com/video/479mhBa3rr0/edit)
 
 **Nota**: Substitua `YOUR_VIDEO_ID` pelo ID do seu vídeo do YouTube.
 
