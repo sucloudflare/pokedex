@@ -1,6 +1,5 @@
-# pokedex
-
-Pokedex - Projeto de Lista de Pokémons
+Pokedex
+Projeto de Lista de Pokémons
 
 Este é um projeto simples de Pokedex (lista de Pokémons) desenvolvido por Edson Bruno. O projeto utiliza HTML, CSS e JavaScript para criar uma interface básica que exibe uma lista de Pokémons e permite carregar mais itens dinamicamente.
 Estrutura do Projeto
@@ -13,7 +12,7 @@ Estrutura do Projeto
 
 Estilos
 
-O arquivo styles.min.css define estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem, e estilos para a estrutura da página.
+O arquivo styles.min.css define estilos gerais para a página. Ele inclui um reset de estilos básico, configurações para a barra de rolagem e estilos para a estrutura da página.
 Funcionalidades
 
     Exibição de uma lista de Pokémons.
