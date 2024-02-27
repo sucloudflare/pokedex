@@ -42,12 +42,6 @@
   <li>Abra o arquivo <code>index.html</code> em um navegador web.</li>
  </ol>
 
-  <h2>Assista ao Vídeo Tutorial</h2>
-
-  <a href="https://www.youtube.com/watch?v=479mhBa3rr0">
-  <img src="https://img.youtube.com/vi/479mhBa3rr0/0.jpg" alt="Assista ao Vídeo">
-  </a>
-
   <h2>Estrutura do Projeto</h2>
 
  <p>Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.</p>
