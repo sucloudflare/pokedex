@@ -41,14 +41,8 @@
   <li>Clone o repositório em sua máquina local.</li>
   <li>Abra o arquivo <code>index.html</code> em um navegador web.</li>
  </ol>
- <h2>Atualização</h2>
- 🚀 Atualização - Versão 1.1.0 🌟
-
-Principais Destaques:
-
-    
-  <h2>Estrutura do Projeto</h2>
-  🚀 Atualização - Versão 1.1.0 🌟
+ 
+ <h2> 🚀 Atualização - Versão 1.1.0 🌟</h2>
 
 Principais Destaques:
 
