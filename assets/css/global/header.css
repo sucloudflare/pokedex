@@ -1,6 +1,7 @@
 .header-bg {
-    background: linear-gradient(90deg, rgba(240, 240, 240, 1) 17%, rgba(255, 255, 255, 1) 56%);
+    background: linear-gradient(90deg, rgba(219, 231, 231, 0.5) 17%, rgba(32, 184, 204, 0.5) 56%);
 }
+
 
 .header {
     display: flex;
@@ -16,7 +17,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-    color: #141414;
+    color:rgb(255, 255, 255);
     transition: all .2s;
 }
 
@@ -33,8 +34,8 @@
 }
 
 .header-menu a:hover {
-    background-color: #2e2e2e;
-    color: #f7f7f7;
+    background-color: #22861f;
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -58,7 +59,7 @@
 }
 
 #search:focus {
-    border-color: #e9e9e9;
+    border-color: #ffffff;
 }
 
 @media (max-width: 600px) {
