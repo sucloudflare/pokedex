@@ -41,7 +41,30 @@
   <li>Clone o repositório em sua máquina local.</li>
   <li>Abra o arquivo <code>index.html</code> em um navegador web.</li>
  </ol>
+ <h2>Atualização</h2>
+ 🚀 Atualização - Versão 1.1.0 🌟
 
+Principais Destaques:
+
+    
   <h2>Estrutura do Projeto</h2>
+  🚀 Atualização - Versão 1.1.0 🌟
+
+Principais Destaques:
+
+    Intensidade de Animações Aumentada:
+        As animações agora apresentam uma intensidade aprimorada, proporcionando uma experiência mais envolvente.
+
+    Degradê Transparente no Plano de Fundo:
+        Adicionada uma nova classe para criar um degradê transparente, oferecendo um visual mais moderno e elegante.
+
+    Imagem de Fundo Fixada com Distância do Topo:
+        A imagem de fundo agora está fixada no plano de fundo, com uma distância de 20px do topo para uma apresentação mais sofisticada.
+
+    Bootstrap Simplificado:
+        O uso do Bootstrap foi simplificado para garantir uma estilização rápida e eficiente.
+
+    Compatibilidade com Telas Pequenas Aprimorada:
+        As animações foram otimizadas para uma melhor experiência em telas menores, mantendo a fluidez e a estética.
 
  <p>Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.</p>
