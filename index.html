@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+    <title>Pokedex | BY EDSON BRUNO</title>
+
+    <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="preload" href="./assets/css/styles.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="./assets/css/global/animations.css">
+    <link rel="stylesheet" href="./assets/css/global/footer.css">
+    <link rel="stylesheet" href="./assets/css/global/global.css">
+    <link rel="stylesheet" href="./assets/css/global/header.css">
+    <link rel="stylesheet" href="./assets/css/global/pokemoncolors.css">
+    <link rel="stylesheet" href="./assets/css/detalhes/pokemon-detail.css">
+    <link rel="stylesheet" href="./assets/css/detalhes/pokemon-individual.css">
+    <link rel="stylesheet" href="./assets/css/detalhes/pokemon-infos.css">
+    <link rel="stylesheet" href="./assets/css/detalhes/statscolors.css">
+    <link rel="stylesheet" href="./assets/css/home/pokedex.css">
+
+    <!-- font roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" >
+</head>
+
+<body>
+    <header class="header-bg fadeIn" aria-label="Cabeçalho">
+        <div class="header container">
+            <a href="index.html" class="logo">
+                <img src="assets/imgs/header/pokeball.svg" width="32" height="32" alt="Logo Pokeball">
+            </a>
+
+            <label for="search">
+                <input type="text" placeholder="Pesquise o Pokémon" id="search" name="search">
+            </label>
+
+            <nav aria-label="Primária">
+                <ul class="header-menu">
+                    <li><a href="index.html">Início
+                        </a>
+                    </li>
+                    <li><a href="details.html">
+                            Pokemons
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">        
+        <h1 class="titulo">Lista de Pokemons</h1>
+        <ol id="pokemonList" class="pokemons">
+        </ol>
+
+        <div class="pagination fadeIn">
+            <button id="loadMoreButton" type="button">
+                Carregar mais
+            </button>
+        </div>
+    </main>
+
+    <section class="pokemon-game">
+        <h2>Jogo de Captura de Pokémon</h2>
+        <p id="gameDescription">Carregando informações do jogo...</p>
+        <button id="playGameButton">Jogar Agora!</button>
+    </section>
+    
+
+    <section class="pokemon-story">
+        <h2>A História do Anime Pokémon</h2>
+        <p>
+            O anime <strong>Pokémon</strong> estreou no Japão em 1997, baseado na popular série de jogos da Nintendo, Game Freak e Creatures. 
+            Ele segue as aventuras de <strong>Ash Ketchum</strong> (ou Satoshi, no original japonês), um jovem treinador de Pokémon, que embarca em 
+            uma jornada para se tornar um Mestre Pokémon. Com seu fiel parceiro <strong>Pikachu</strong>, Ash viaja por várias regiões, enfrentando 
+            desafios e batalhando contra outros treinadores de Pokémon, enquanto captura novos Pokémon e aprende sobre a importância de amizade e 
+            trabalho em equipe.
+        </p>
+        
+        <p>
+            Ao longo do anime, Ash é acompanhado por diferentes amigos, como <strong>Misty</strong>, <strong>Brock</strong>, e mais tarde por personagens como <strong>May</strong>, <strong>Dawn</strong> e <strong>Serena</strong>, 
+            que o ajudam em sua jornada. Juntos, eles enfrentam não apenas batalhas de ginásio e competições, mas também tentam frustrar os planos da maligna <strong>Equipe Rocket</strong>, 
+            que tenta constantemente roubar o Pikachu de Ash.
+        </p>
+        
+        <p>
+            A série é conhecida por sua combinação de ação, aventura e momentos emocionantes, além de sua capacidade de transmitir mensagens sobre amizade, perseverança e amor pelos animais 
+            (representados pelos Pokémon). Ao longo de várias temporadas e regiões, Ash continua sua jornada, sempre em busca de novas aventuras e batalhas.
+        </p>
+    
+        <p>
+            Com mais de mil episódios, o anime Pokémon é um dos mais longos da história e se tornou um fenômeno global, inspirando filmes, jogos, cartas colecionáveis e muitos outros produtos, 
+            marcando gerações de fãs ao redor do mundo.
+        </p>
+    </section>
+
+    <footer class="footer container fadeIn" aria-label="Rodapé">
+        <h3>Criado por <a href="https://www.instagram.com/www_hostname_com/" target="_blank">@Bruno-dev</a>.</h3>
+    </footer>
+    <!-- Adicionando música -->
+    <audio autoplay loop>
+        <source src="assets/music/pokemon.mp3" type="audio/mpeg">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+    <!-- <script src="assets/js/loadPokemon.js"></script> -->
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+          // Simulação de uma API para um único jogo
+    const gameAPI = {
+        title: 'Captura de Pokémon',
+        description: 'Capture Pokémon selvagens em um tempo limitado!',
+        url: 'https://pokemonbr.com/pt' // URL do jogo
+    };
+
+    // Função para carregar o jogo
+    function loadGame() {
+        const gameDescription = document.getElementById('gameDescription');
+        const playGameButton = document.getElementById('playGameButton');
+
+        // Definindo o título e descrição do jogo
+        gameDescription.textContent = `${gameAPI.description}`;
+        playGameButton.addEventListener('click', () => {
+            window.open(gameAPI.url, '_blank'); // Abre o jogo em uma nova aba
+        });
+    }
+
+    // Carregar o jogo ao abrir a página
+    loadGame();
+    </script>
+</body>
+
+</html>
