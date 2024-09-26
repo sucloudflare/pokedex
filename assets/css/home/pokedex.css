@@ -1,0 +1,320 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.titulo {
+    height: 0;
+    overflow: hidden;
+}
+
+.pokemon {
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(90deg, rgba(7, 7, 7, 0.5) 17%, rgba(4, 90, 160, 0.5) 56%);
+    overflow: hidden;
+    position: relative;
+}
+
+.pokemon::before {
+    content: '';
+    background: url(../../imgs/header/pokeball.svg) no-repeat bottom 25px right / 232px 232px;
+    position: absolute;
+    bottom: -120px;
+    left: 140px;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: grayscale(1);
+    opacity:.025;
+}
+
+.pokemon:hover {
+    transform: scale(1.01);
+}
+
+.pokemon .number {
+    color: #ffffff;
+    opacity: .3;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.pokemon .name {
+    margin-bottom: .25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color:rgb(255, 255, 255);
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1 {
+    color:#3de20a;
+}
+.pokemon .detail .types .type {
+    border-radius: 1rem;
+    font-size: .8rem;
+    padding: .25rem 1rem;
+    margin: .25rem 0;
+    text-align: left;
+    text-transform: capitalize;
+    color: #141414;
+    font-weight: 500;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 150px;
+    align-self: flex-end;
+    padding-right: 12px;
+    filter: drop-shadow(2px 2px 5px #0000003a);
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.pagination button {
+    background-color: #286416;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin: .25rem 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    transform: translateY(-2px);
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        max-width: 1200px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+
+   .pokemon .pokemon-conteudo .number .slideInDown{
+    color:rgb(255, 255, 255);
+   }
+}
+
+
+@media screen and (max-width: 800px) {
+    .pokemons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .pokemons {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+
+
+
+
+
+
+/* Estilo para o título com animação e fundo transparente */
+.pokemon-story h2 {
+    font-size: 3em; /* Aumentando o tamanho da fonte */
+    color: #f3f71f; /* Dourado */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Melhor tipografia para títulos */
+    letter-spacing: 3px;
+    background: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    animation: fadeInDown 2s ease-out forwards; /* Corrigida a animação */
+    opacity: 0; /* Inicializa com opacidade 0 para o fade-in funcionar */
+}
+
+/* Estilo para os parágrafos com animação e fundo transparente */
+.pokemon-story p {
+    font-size: 1.5em; /* Aumentando o tamanho da fonte */
+    color: #FFFFFF;
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif; /* Fonte mais moderna e legível */
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px 20px;
+    animation: fadeInUp 3s ease-out forwards; /* Corrigida a animação */
+    opacity: 0; /* Inicializa com opacidade 0 para o fade-in funcionar */
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para os links e textos em negrito */
+strong {
+    color: #FF4500; /* Laranja forte */
+    font-weight: bold;
+}
+
+a {
+    color: #FFD700; /* Dourado */
+    text-decoration: none;
+}
+
+/* Efeito hover para links */
+a:hover {
+    color: #FF4500; /* Laranja forte */
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+/* Ajuste para telas menores (tablets) */
+@media screen and (max-width: 768px) {
+    .pokemon-story h2 {
+        font-size: 2.5em;
+        padding: 8px 15px;
+    }
+
+    .pokemon-story p {
+        font-size: 1.3em;
+        padding: 12px 20px;
+    }
+}
+
+/* Ajuste para telas pequenas (smartphones) */
+@media screen and (max-width: 480px) {
+    .pokemon-story h2 {
+        font-size: 2em;
+        padding: 6px 10px;
+        margin-left: 10px;
+    }
+
+    .pokemon-story p {
+        font-size: 1.2em;
+        padding: 10px 15px;
+        margin: 15px 10px;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    .pokemon-story h2 {
+        font-size: 1.8em;
+        padding: 5px 8px;
+        margin-left: 5px;
+    }
+
+    .pokemon-story p {
+        font-size: 1em;
+        padding: 8px 10px;
+        margin: 10px 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.pokemon-game {
+    background-color: rgba(128, 0, 128, 0.7); /* Fundo roxo semi-transparente */
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-game h2 {
+    font-size: 2.5em;
+    color: #FFD700; /* Dourado */
+}
+
+.pokemon-game p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #FFD700; /* Dourado */
+    color: #000; /* Preto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500; /* Laranja forte ao passar o mouse */
+}
