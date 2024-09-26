@@ -140,8 +140,9 @@ loadGame();</code></pre>
         <li>Adição de mais jogos para enriquecer a experiência do usuário.</li>
         <li>Melhorias na interface do usuário para um design mais atraente.</li>
     </ul>
-    <img src="10" alt='oi'>
+    <img src="10.png" alt='oi'>
     <br>
-    <img src='11' alt='oi'>
+    <img src='11.png' alt='oi'>
+    <br>
 
  <p>Esse é um projeto simples destinado a fins educacionais e pode ser expandido com mais recursos e funcionalidades. Sinta-se à vontade para contribuir ou personalizar conforme suas necessidades.</p>
