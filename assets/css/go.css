@@ -1,0 +1,111 @@
+/* Definir o fundo da página com a imagem */
+body {
+    background-image: url('./assets/imgs/fundo1.jpg'); /* Imagem de fundo alterada */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    color: aliceblue;
+    font-size: 20px; /* Ajuste sutil no tamanho da fonte */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Customização do carrossel */
+.carousel-item img {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-100%); /* Inicialmente à esquerda */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.carousel-item img.show {
+    opacity: 1; /* Quando a imagem aparecer */
+    transform: translateX(0); /* A imagem vai para o centro */
+}
+
+/* Bloco de informações organizadas em linha */
+.carousel-info {
+    margin-top: 15px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 0, 0.7)); /* Transição de branco para amarelo */
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* Cor mais escura para texto */
+    font-size: 18px; /* Ajuste sutil no tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras para efeito de destaque */
+    opacity: 0;
+    transform: translateX(-100%); /* Inicialmente à esquerda */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.carousel-info.show {
+    opacity: 1;
+    transform: translateX(0); /* A info aparece de lado */
+}
+
+.carousel-info .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.carousel-info h5 {
+    font-size: 20px; /* Ajuste do tamanho do título */
+    font-weight: bold;
+}
+
+.carousel-info p {
+    font-size: 18px; /* Ajuste do tamanho do texto */
+    line-height: 1.6;
+}
+
+.slick-slide {
+    text-align: center;
+}
+
+.slick-prev, .slick-next {
+    color: #000;
+}
+
+/* Estilo para a notificação tutorial com fundo branco e borda azul */
+.tutorial-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #3B8D99; /* Cor da borda azul estilo Pokédex */
+    z-index: 9999;
+    font-size: 18px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(100%); /* Inicialmente abaixo da tela */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.tutorial-notification.show {
+    opacity: 1;
+    transform: translateY(0); /* A notificação sobe e aparece */
+}
+
+.tutorial-notification button {
+    background: none;
+    border: none;
+    color: #3B8D99; /* Cor azul para o botão */
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Customização das bordas e elementos do carrossel */
+.carousel-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
