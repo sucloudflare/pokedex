@@ -124,6 +124,15 @@
             overflow: hidden;
             margin-bottom: 20px;
         }
+
+        /* Estilo para a imagem padrão (imagem de exemplo) */
+        .default-img {
+            max-width: 100px;
+            margin: 0 auto;
+            display: block;
+            opacity: 1; /* A imagem de exemplo sempre visível */
+            transition: opacity 1s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -142,7 +151,7 @@
             <div class="col-12" id="pokemonDetails">
                 <div class="text-center">
                     <h3 id="pokemonName">Escolha um Pokémon para ver seus detalhes</h3>
-                    <img id="pokemonImage" src="" alt="Imagem do Pokémon" class="img-fluid rounded">
+                    <img id="pokemonImage" class="default-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Pokémon de Exemplo">
                 </div>
                 <div class="carousel-info text-center">
                     <!-- As informações agora são exibidas em linha, ao invés de coluna -->
@@ -166,10 +175,6 @@
                         <h5>Descrição:</h5>
                         <p id="pokemonDescription">Clique em um Pokémon para ver detalhes.</p>
                     </div>
-                    <div class="info-item">
-                        <h5>Evólucões:</h5>
-                        <p id="pokemonEvolution">Clique em um Pokémon para ver sua evolução.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +183,7 @@
     <!-- Notificação de Tutorial -->
     <div class="tutorial-notification" id="tutorialNotification">
         <div>
-            <p><strong>Dica:</strong> Clique em cada imagem para ver a evolução dos Pokémons!</p>
+            <p><strong>Dica:</strong> Clique em cada imagem para ver a evolução dos Pokémons e gire para o lado!</p>
             <p>Essa página mostra as evoluções dos Pokémons.</p>
         </div>
         <button onclick="closeTutorial()">X</button>
@@ -236,31 +241,30 @@
 
             // Exibir as informações do Pokémon
             document.getElementById('pokemonName').textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-            document.getElementById('pokemonImage').src = data.sprites.other['official-artwork'].front_default;
             document.getElementById('pokemonType').textContent = data.types.map(type => type.type.name).join(', ');
             document.getElementById('pokemonHeight').textContent = `${data.height / 10} m`;
             document.getElementById('pokemonWeight').textContent = `${data.weight / 10} kg`;
             document.getElementById('pokemonAbility').textContent = data.abilities.map(ability => ability.ability.name).join(', ');
             document.getElementById('pokemonDescription').textContent = 'Descrição do Pokémon irá aqui.';
-            document.getElementById('pokemonEvolution').textContent = 'Evolução do Pokémon será aqui.';
+
+            // Trocar a imagem para o Pokémon escolhido
+            document.getElementById('pokemonImage').src = data.sprites.other['official-artwork'].front_default;
 
             // Adicionar animações
             document.querySelector('.carousel-info').classList.add('show');
-            document.querySelector('#pokemonImage').classList.add('show');
         }
 
         // Exibição da notificação tutorial
         window.onload = function() {
             document.getElementById('tutorialNotification').classList.add('show');
-            setTimeout(() => {
-                document.getElementById('tutorialNotification').classList.remove('show');
-            }, 5000);
-        }
+        };
 
+        // Fechar a notificação tutorial
         function closeTutorial() {
             document.getElementById('tutorialNotification').classList.remove('show');
         }
 
+        // Carregar os Pokémons
         fetchPokemonList();
     </script>
 </body>
