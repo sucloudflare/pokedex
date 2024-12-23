@@ -42,17 +42,15 @@
             transform: translateX(0); /* A imagem vai para o centro */
         }
 
-        /* Bloco de informações organizadas em linha */
+        /* Tabela com bordas arredondadas e estilo elegante */
         .carousel-info {
             margin-top: 15px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 0, 0.7)); /* Transição de branco para amarelo */
+            background: linear-gradient(to bottom, #f9f9f9, #e4c960); /* Gradiente do branco para o amarelo */
             padding: 20px;
-            border-radius: 10px;
-            color: #333; /* Cor mais escura para texto */
-            font-size: 18px; /* Ajuste sutil no tamanho da fonte */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras para efeito de destaque */
-            opacity: 0;
-            transform: translateX(-100%); /* Inicialmente à esquerda */
+            border-radius: 15px; /* Bordas mais arredondadas */
+            color: #333;
+            font-size: 18px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombras mais sutis e elegantes */
             transition: transform 1s ease-out, opacity 1s ease-out;
         }
 
@@ -61,20 +59,42 @@
             transform: translateX(0); /* A info aparece de lado */
         }
 
-        .carousel-info .info-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+        .carousel-info table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .carousel-info h5 {
-            font-size: 20px; /* Ajuste do tamanho do título */
+        .carousel-info th, .carousel-info td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .carousel-info th {
+            background-color: #dbc364; /* Cabeçalho da tabela com fundo amarelo */
             font-weight: bold;
+            text-transform: uppercase; /* Letra maiúscula no cabeçalho */
         }
 
-        .carousel-info p {
-            font-size: 18px; /* Ajuste do tamanho do texto */
-            line-height: 1.6;
+        .carousel-info td {
+            background-color: #fff;
+            color: #333;
+            border-left: 3px solid #ddd; /* Linha separadora mais elegante */
+        }
+
+        .carousel-info tr:last-child td {
+            border-bottom: none; /* Remover borda da última linha */
+        }
+
+        /* Efeito hover nas linhas da tabela */
+        .carousel-info tr:hover {
+            background-color: #f1f1f1; /* Cor de fundo quando passar o mouse */
+        }
+
+        .carousel-info th, .carousel-info td {
+            border-radius: 8px; /* Bordas arredondadas nas células */
         }
 
         .slick-slide {
@@ -154,27 +174,29 @@
                     <img id="pokemonImage" class="default-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Pokémon de Exemplo">
                 </div>
                 <div class="carousel-info text-center">
-                    <!-- As informações agora são exibidas em linha, ao invés de coluna -->
-                    <div class="info-item">
-                        <h5>Tipo:</h5>
-                        <p id="pokemonType">---</p>
-                    </div>
-                    <div class="info-item">
-                        <h5>Altura:</h5>
-                        <p id="pokemonHeight">---</p>
-                    </div>
-                    <div class="info-item">
-                        <h5>Peso:</h5>
-                        <p id="pokemonWeight">---</p>
-                    </div>
-                    <div class="info-item">
-                        <h5>Habilidade:</h5>
-                        <p id="pokemonAbility">---</p>
-                    </div>
-                    <div class="info-item">
-                        <h5>Descrição:</h5>
-                        <p id="pokemonDescription">Clique em um Pokémon para ver detalhes.</p>
-                    </div>
+                    <!-- As informações são exibidas como uma tabela -->
+                    <table>
+                        <tr>
+                            <th>Tipo:</th>
+                            <td id="pokemonType">---</td>
+                        </tr>
+                        <tr>
+                            <th>Altura:</th>
+                            <td id="pokemonHeight">---</td>
+                        </tr>
+                        <tr>
+                            <th>Peso:</th>
+                            <td id="pokemonWeight">---</td>
+                        </tr>
+                        <tr>
+                            <th>Habilidade:</th>
+                            <td id="pokemonAbility">---</td>
+                        </tr>
+                        <tr>
+                            <th>Descrição:</th>
+                            <td id="pokemonDescription">Clique em um Pokémon para ver detalhes.</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -183,7 +205,7 @@
     <!-- Notificação de Tutorial -->
     <div class="tutorial-notification" id="tutorialNotification">
         <div>
-            <p><strong>Dica:</strong> Clique em cada imagem para ver a evolução dos Pokémons e gire para o lado!</p>
+            <p><strong>Dica:</strong> Clique em cada imagem para ver a evolução dos Pokémons!</p>
             <p>Essa página mostra as evoluções dos Pokémons.</p>
         </div>
         <button onclick="closeTutorial()">X</button>
@@ -234,38 +256,29 @@
             });
         }
 
-        // Função para buscar os detalhes de um Pokémon
+        // Função para buscar detalhes do Pokémon
         async function fetchPokemonDetails(url) {
             const response = await fetch(url);
             const data = await response.json();
-
-            // Exibir as informações do Pokémon
             document.getElementById('pokemonName').textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-            document.getElementById('pokemonType').textContent = data.types.map(type => type.type.name).join(', ');
-            document.getElementById('pokemonHeight').textContent = `${data.height / 10} m`;
-            document.getElementById('pokemonWeight').textContent = `${data.weight / 10} kg`;
-            document.getElementById('pokemonAbility').textContent = data.abilities.map(ability => ability.ability.name).join(', ');
-            document.getElementById('pokemonDescription').textContent = 'Descrição do Pokémon irá aqui.';
-
-            // Trocar a imagem para o Pokémon escolhido
             document.getElementById('pokemonImage').src = data.sprites.other['official-artwork'].front_default;
-
-            // Adicionar animações
-            document.querySelector('.carousel-info').classList.add('show');
+            document.getElementById('pokemonType').textContent = data.types.map(type => type.type.name).join(', ');
+            document.getElementById('pokemonHeight').textContent = data.height;
+            document.getElementById('pokemonWeight').textContent = data.weight;
+            document.getElementById('pokemonAbility').textContent = data.abilities.map(ability => ability.ability.name).join(', ');
+            document.getElementById('pokemonDescription').textContent = 'A descrição do Pokémon estará disponível em breve.';
         }
 
-        // Exibição da notificação tutorial
-        window.onload = function() {
-            document.getElementById('tutorialNotification').classList.add('show');
-        };
-
-        // Fechar a notificação tutorial
+        // Função para fechar a notificação tutorial
         function closeTutorial() {
             document.getElementById('tutorialNotification').classList.remove('show');
         }
 
-        // Carregar os Pokémons
-        fetchPokemonList();
+        // Exibir a lista de Pokémons ao carregar a página
+        window.onload = () => {
+            fetchPokemonList();
+            document.getElementById('tutorialNotification').classList.add('show');
+        };
     </script>
 </body>
 </html>
