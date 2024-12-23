@@ -64,16 +64,19 @@
             border-collapse: collapse;
             border-radius: 10px;
             overflow: hidden;
+            border: none;
         }
 
         .carousel-info th, .carousel-info td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent; /* Torna as células transparentes */
+    border: none;
+}
 
         .carousel-info th {
-            background-color: #dbc364; /* Cabeçalho da tabela com fundo amarelo */
+            background-color: transparent; /* Cabeçalho da tabela com fundo amarelo */
             font-weight: bold;
             text-transform: uppercase; /* Letra maiúscula no cabeçalho */
         }
@@ -90,7 +93,7 @@
 
         /* Efeito hover nas linhas da tabela */
         .carousel-info tr:hover {
-            background-color: #f1f1f1; /* Cor de fundo quando passar o mouse */
+            background-color: #f8e28b; /* Cor de fundo quando passar o mouse */
         }
 
         .carousel-info th, .carousel-info td {
